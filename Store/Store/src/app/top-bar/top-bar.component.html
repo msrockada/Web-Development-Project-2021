@@ -1,0 +1,19 @@
+<div class="header_container">
+  <div class="header_columns">
+    <div class="col-1 header_column">
+      <div class="header_title">
+        <h3>Online Shop of Sneakers</h3>
+      </div>
+    </div>
+    <div class="col-2 header_column">
+      <div class="social">
+        <div *ngIf ="!currentUser" class="col-3 header_column" id="log">
+          <a [routerLink]="['login']"><button>Login</button></a>
+        </div>
+        <div *ngIf ="!currentUser" class="col-3 header_column">
+          <a [routerLink]="['signup']"><button>Signup</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

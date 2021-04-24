@@ -1,0 +1,14 @@
+h3{
+  font-family:bahnschrift ;
+  font-size: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.cart-item {
+  font-size: 25px;
+  margin-left: 50px;
+  padding: 10px;
+  background-color: #cfd9ce;
+
+}

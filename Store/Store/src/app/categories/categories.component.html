@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="categories">
+    <div class="categories_container">
+      <h4>Categories</h4>
+      <div *ngFor="let category of categories, index as categoryId" class="category_item" [routerLink]="['/category/' + categoryId + '/products']">
+
+          <h4 [title]="category.name">{{category.name}}</h4>
+
+      </div>
+     
+    </div>
+  </div>
+  <div class="products_container">
+    <app-product-list></app-product-list>
+  </div>
+</div>
+
+
+
+

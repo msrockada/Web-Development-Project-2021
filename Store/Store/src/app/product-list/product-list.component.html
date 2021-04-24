@@ -1,0 +1,16 @@
+<div class="products_container">
+  <div class="products">
+    <button (click)="sort()">Sort By Price</button>
+    <div *ngFor="let product of products, index as productId" class="product_item">
+      <img src="{{product.image}}" alt="">
+      <h4>
+        <a [title]="product.name + ' details'" [routerLink]="['/products/' + product.id]">
+          {{ product.name }}
+        </a>
+      </h4>
+
+      <h4 class="product_price">Price: {{product.price}}</h4>
+    </div>
+  </div>
+</div>
+

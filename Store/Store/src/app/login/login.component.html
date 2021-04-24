@@ -1,0 +1,30 @@
+<div class="page">
+    <div class="wrapper">
+        <div class="container">
+            <div class="form-data">
+               <h1>Online Shop</h1>
+                <form [formGroup] ="loginForm" (ngSubmit)="onSubmit()"> 
+                   <div class="email">
+                         <label>Email</label>
+                         <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" /><br>
+                         <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div class="iff" *ngIf="f.email.errors.required">Email is required</div>
+                         </div>
+                    </div> 
+                    <div class="password">
+                         <label>Password</label>
+                          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                          <div  *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                              <div class="iff" *ngIf="f.password.errors.required">Password is required</div>
+                          </div>
+                         <br>
+                    </div>
+                     <button [disabled]="loading" class="github-btn">
+                       <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Log in</button>
+                    <span class="terms"><p> New to Demo?<a routerLink="/signup">  Create an account</a></p></span>
+                </form>
+            </div>
+        </div>
+    </div>
+ </div>
